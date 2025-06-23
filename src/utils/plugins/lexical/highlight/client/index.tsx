@@ -53,6 +53,7 @@ export const MarkFeatureClient = createClientFeature({
               if (isInsideMark) {
                 const newNode = $createTextNode(selectData)
                 const parent = selection.anchor.getNode().getParent()
+                console.log('Parent', parent?.__type)
                 if (parent && parent.getTextContentSize() === selectData.length) {
                   parent.remove()
                 }

@@ -1,7 +1,7 @@
 // storage-adapter-import-placeholder
 import { mongooseAdapter } from '@payloadcms/db-mongodb'
 // import { payloadCloudPlugin } from '@payloadcms/payload-cloud'
-import { lexicalEditor } from '@payloadcms/richtext-lexical'
+import { FixedToolbarFeature, lexicalEditor } from '@payloadcms/richtext-lexical'
 import { MarkFeature } from './utils/plugins/lexical/highlight/server'
 
 import path from 'path'
@@ -13,6 +13,7 @@ import { Users } from './collections/Users'
 import { Media } from './collections/Media'
 import Posts from './collections/Posts'
 
+import { FootnoteFeature } from './utils/plugins/lexical/footnote/server'
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
@@ -23,9 +24,16 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
+
   collections: [Users, Media, Posts],
+
   editor: lexicalEditor({
-    features: ({ defaultFeatures }) => [...defaultFeatures, MarkFeature()],
+    features: ({ defaultFeatures }) => [
+      ...defaultFeatures.filter((item) => !['superscript', 'subscript'].includes(item.key)),
+      FixedToolbarFeature(),
+      MarkFeature(),
+      FootnoteFeature(),
+    ],
   }),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {

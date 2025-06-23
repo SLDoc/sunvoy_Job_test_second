@@ -1,67 +1,96 @@
-# Payload Blank Template
+# Full Stack Engineer Challenge – Payload CMS + Lexical Editor
 
-This template comes configured with the bare minimum to get started on anything you need.
+This repository contains my solution to the Full Stack Engineer Challenge. The objective was to integrate [Payload CMS](https://payloadcms.com/) with the new [Lexical Editor](https://payloadcms.com/docs/rich-text/lexical), and implement two custom rich text features: a `<mark>` highlighting tool and a footnote system.
 
-## Quick start
+---
 
-This template can be deployed directly from our Cloud hosting and it will setup MongoDB and cloud S3 object storage for media.
+## 🛠 Stack
 
-## Quick Start - local setup
+- **Language:** TypeScript
+- **CMS:** Payload CMS (Blank Template)
+- **Database:** MongoDB
+- **Editor:** Lexical Editor (via Payload)
+- **Icons:** FontAwesome
+- **UI:** Payload Admin Panel
 
-To spin up this template locally, follow these steps:
+---
 
-### Clone
+## 🚀 Steps Completed
 
-After you click the `Deploy` button above, you'll want to have standalone copy of this repo on your machine. If you've already cloned this repo, skip to [Development](#development).
+### ✅ Step 1: GitHub Repository
 
-### Development
+- Created a public GitHub repository to track progress.
+- All changes are committed incrementally with meaningful commit messages.
 
-1. First [clone the repo](#clone) if you have not done so already
-2. `cd my-project && cp .env.example .env` to copy the example environment variables. You'll need to add the `MONGODB_URI` from your Cloud project to your `.env` if you want to use S3 storage and the MongoDB database that was created for you.
+### ✅ Step 2: Payload CMS Setup
 
-3. `pnpm install && pnpm dev` to install dependencies and start the dev server
-4. open `http://localhost:3000` to open the app in your browser
+- Initialized a Payload CMS project using the blank template.
+- Connected to a local MongoDB instance.
 
-That's it! Changes made in `./src` will be reflected in your app. Follow the on-screen instructions to login and create your first admin user. Then check out [Production](#production) once you're ready to build and serve your app, and [Deployment](#deployment) when you're ready to go live.
+### ✅ Step 3: Lexical Editor Integration
 
-#### Docker (Optional)
+- Configured Payload to use the Lexical rich text editor by modifying `payload.config.ts`.
 
-If you prefer to use Docker for local development instead of a local MongoDB instance, the provided docker-compose.yml file can be used.
+### ✅ Step 4: Posts Collection
 
-To do so, follow these steps:
+- Created a `posts` collection with the following fields:
+  - `title`: plain text
+  - `content`: rich text (Lexical Editor)
 
-- Modify the `MONGODB_URI` in your `.env` file to `mongodb://127.0.0.1/<dbname>`
-- Modify the `docker-compose.yml` file's `MONGODB_URI` to match the above `<dbname>`
-- Run `docker-compose up` to start the database, optionally pass `-d` to run in the background.
+### ✅ Step 5: `<mark>` Custom Feature
 
-## How it works
+- Added a custom `<mark>` feature to the Lexical editor.
+- **Features:**
+  - Button placed between _strikethrough_ and _subscript_
+  - Uses FontAwesome `faHighlighter` icon
+  - Can wrap/unwrap selected text with `<mark>` tags
+  - Selection remains active after applying the mark
+  - Marked content is parsed to `<mark>` in HTML output
 
-The Payload config is tailored specifically to the needs of most websites. It is pre-configured in the following ways:
+🔗 **Demo (Loom Recording):** [Watch Feature in Action](#) _https://www.loom.com/share/445f79d66c444cbca009d5dcd046510d?sid=0f70f568-4944-41f3-8300-67ad291025b4_
 
-### Collections
+### ✅ Step 6: Footnote Custom Feature
 
-See the [Collections](https://payloadcms.com/docs/configuration/collections) docs for details on how to extend this functionality.
+- Replaced the default _superscript_ functionality with a footnote feature.
+- Removed the _subscript_ button entirely.
+- **Features:**
+  - Inserts numbered `<sup>` node for footnotes
+  - Opens drawer to input rich text (only: paragraph, bold, italic, strikethrough, links)
+  - Previews content when the footnote is selected
+  - Allows editing/removing footnotes
+  - Converts to `<sup>` + `<footer><ul><li>...</li></ul></footer>` in HTML
 
-- #### Users (Authentication)
+🔗 **Demo (Loom Recording):** [Watch Feature in Action](#) _https://www.loom.com/share/853d790e717949479acb370e297031f0?sid=10e4e0d4-c660-474f-8f7b-bb141a86b05f_
 
-  Users are auth-enabled collections that have access to the admin panel.
+---
 
-  For additional help, see the official [Auth Example](https://github.com/payloadcms/payload/tree/main/examples/auth) or the [Authentication](https://payloadcms.com/docs/authentication/overview#authentication-overview) docs.
+## 🧪 Testing & Usage
 
-- #### Media
+1. Clone the repo
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start MongoDB (if not already running)
+4. Start Payload:
+   ```bash
+   npm run dev
+   ```
+5. Visit the Payload Admin Panel at `http://localhost:3000/admin`
 
-  This is the uploads enabled collection. It features pre-configured sizes, focal point and manual resizing to help you manage your pictures.
+---
 
-### Docker
+## ⏱ Time Taken
 
-Alternatively, you can use [Docker](https://www.docker.com) to spin up this template locally. To do so, follow these steps:
+- **Estimated:** [Your initial estimate]
+- **Actual Total Time:** [Total hours/days spent]
 
-1. Follow [steps 1 and 2 from above](#development), the docker-compose file will automatically use the `.env` file in your project root
-1. Next run `docker-compose up`
-1. Follow [steps 4 and 5 from above](#development) to login and create your first admin user
+---
 
-That's it! The Docker instance will help you get up and running quickly while also standardizing the development environment across your teams.
+## 📩 Submission
 
-## Questions
+- GitHub Repo: [Your Repo Link]
+- Loom Videos: Linked above
+- Sent via reply to the original email.
 
-If you have any issues or questions, reach out to us on [Discord](https://discord.com/invite/payload) or start a [GitHub discussion](https://github.com/payloadcms/payload/discussions).
+✅ Task completed 100%

@@ -16,7 +16,10 @@ export class MarkNode extends ElementNode {
   }
 
   createDOM(): HTMLElement {
-    return document.createElement('mark')
+    const mark = document.createElement('mark')
+
+    mark.style.backgroundColor = 'aquamarine'
+    return mark
   }
   isInline(): true {
     return true

@@ -15,8 +15,6 @@
     "start": "cross-env NODE_OPTIONS=--no-deprecation next start"
   },
   "dependencies": {
-    "@fortawesome/free-solid-svg-icons": "^6.7.2",
-    "@fortawesome/react-fontawesome": "^0.2.2",
     "@payloadcms/db-mongodb": "3.43.0",
     "@payloadcms/next": "3.43.0",
     "@payloadcms/payload-cloud": "3.43.0",
