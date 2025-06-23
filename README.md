@@ -89,7 +89,7 @@ This repository contains my solution to the Full Stack Engineer Challenge. The o
 
 ## 📩 Submission
 
-- GitHub Repo: [Your Repo Link]
+- GitHub Repo: _https://github.com/SLDoc/sunvoy_job_test_second.git_
 - Loom Videos: Linked above
 - Sent via reply to the original email.
 
