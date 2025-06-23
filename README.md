@@ -80,13 +80,6 @@ This repository contains my solution to the Full Stack Engineer Challenge. The o
 
 ---
 
-## ⏱ Time Taken
-
-- **Estimated:** [Your initial estimate]
-- **Actual Total Time:** [Total hours/days spent]
-
----
-
 ## 📩 Submission
 
 - GitHub Repo: _https://github.com/SLDoc/sunvoy_job_test_second.git_
