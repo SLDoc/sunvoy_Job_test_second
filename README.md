@@ -47,7 +47,7 @@ This repository contains my solution to the Full Stack Engineer Challenge. The o
   - Selection remains active after applying the mark
   - Marked content is parsed to `<mark>` in HTML output
 
-🔗 **Demo (Loom Recording):** [Watch Feature in Action](#) _https://www.loom.com/share/445f79d66c444cbca009d5dcd046510d?sid=0f70f568-4944-41f3-8300-67ad291025b4_
+🔗 **Demo (Loom Recording):** [Watch Highlight(Mark) Feature in Action](#) _https://www.loom.com/share/445f79d66c444cbca009d5dcd046510d?sid=0f70f568-4944-41f3-8300-67ad291025b4_
 
 ### ✅ Step 6: Footnote Custom Feature
 
@@ -60,7 +60,7 @@ This repository contains my solution to the Full Stack Engineer Challenge. The o
   - Allows editing/removing footnotes
   - Converts to `<sup>` + `<footer><ul><li>...</li></ul></footer>` in HTML
 
-🔗 **Demo (Loom Recording):** [Watch Feature in Action](#) _https://www.loom.com/share/853d790e717949479acb370e297031f0?sid=10e4e0d4-c660-474f-8f7b-bb141a86b05f_
+🔗 **Demo (Loom Recording):** [Watch Footnote Feature in Action](#) _https://www.loom.com/share/853d790e717949479acb370e297031f0?sid=10e4e0d4-c660-474f-8f7b-bb141a86b05f_
 
 ---
 
